@@ -51,7 +51,7 @@ import { Link } from 'react-router-dom';
                   <td>$ {parseFloat(client.balance).toFixed(2)}</td>
                   <td>
                     <Link to={`/client/${client.id}`} className="btn btn-secondary btn-sm">
-                    <i class="fas fa-arrow-circle-right" /> 
+                    <i className="fas fa-arrow-circle-right" /> 
                         Details
                     </Link>
                   </td>
