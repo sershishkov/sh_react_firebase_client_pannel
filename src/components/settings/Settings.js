@@ -48,7 +48,7 @@ import {
           </div>
           <div className="card-body">
             <form >
-              <div class="form-group">
+              <div className="form-group">
                 <label > Allow Registration {' '}
                   <input 
                     type="checkbox" 
@@ -58,7 +58,7 @@ import {
                   />
                 </label>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label > Disable balance on Add {' '}
                   <input 
                     type="checkbox" 
@@ -68,7 +68,7 @@ import {
                   />
                 </label>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label > Disable balance on Edit {' '}
                   <input 
                     type="checkbox" 
