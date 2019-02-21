@@ -66,22 +66,22 @@ if (localStorage.getItem('settings') == null) {
 //Create initial state
 const initialState = {settings:JSON.parse(localStorage.getItem('settings'))};
 
-//Create store
-// const store = createStoreWithFirebase(rootReducer, initialState, compose(
-//   reactReduxFirebase(firebase),
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// ));
-let store;
+// Create store
+const store = createStoreWithFirebase(rootReducer, initialState, compose(
+  reactReduxFirebase(firebase)
+  
+));
+// let store;
 
-if(process.env.NODE_ENV === 'production') {
-  store = createStoreWithFirebase(rootReducer, initialState, compose(
-    reactReduxFirebase(firebase)   
-  ));
-} else {
-  store = createStoreWithFirebase(rootReducer, initialState, compose(
-    reactReduxFirebase(firebase),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  ));
-}
+// if(process.env.NODE_ENV === 'production') {
+//   store = createStoreWithFirebase(rootReducer, initialState, compose(
+//     reactReduxFirebase(firebase)   
+//   ));
+// } else {
+//   store = createStoreWithFirebase(rootReducer, initialState, compose(
+//     reactReduxFirebase(firebase),
+//     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+//   ));
+// }
 
 export default store;
